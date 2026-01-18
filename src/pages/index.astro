@@ -5,6 +5,7 @@ import { Hero } from '../components/Hero';
 import { Services } from '../components/Services';
 import { About } from '../components/About';
 import { Contact } from '../components/Contact';
+import { Footer } from '../components/Footer';
 
 // Hero data
 const heroData = {
@@ -94,6 +95,8 @@ const contactData = {
       contact={contactData.contact}
     />
   </main>
+
+  <Footer client:load />
 
   <!-- Dark mode toggle button -->
   <button
