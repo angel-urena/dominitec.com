@@ -1,0 +1,22 @@
+{
+  "contact": {
+    "headline": "Get in Touch",
+    "subtext": "Have a project in mind? We'd love to hear about it. Send us a message and we'll get back to you within 24 hours.",
+    "submitButtonText": "Send Message",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@example.com"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell us about your project..."
+      }
+    },
+    "successMessage": "Thanks for reaching out! We'll be in touch soon."
+  }
+}

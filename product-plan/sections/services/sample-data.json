@@ -1,0 +1,16 @@
+{
+  "services": [
+    {
+      "id": "custom-software",
+      "icon": "cog",
+      "title": "Custom Software Development",
+      "description": "Tailored solutions built from the ground up to match your exact business needs. From internal tools to customer-facing platforms, we turn your vision into reliable, scalable software."
+    },
+    {
+      "id": "web-mobile",
+      "icon": "smartphone",
+      "title": "Web & Mobile Apps",
+      "description": "Modern, responsive applications that work beautifully across all devices. We build fast, intuitive experiences using React, React Native, and the latest web technologies."
+    }
+  ]
+}

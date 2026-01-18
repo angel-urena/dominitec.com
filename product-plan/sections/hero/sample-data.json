@@ -1,0 +1,12 @@
+{
+  "headline": "Quality Software, Smart Pricing",
+  "subtext": "Dominitec delivers custom software and web applications with the quality you expect, at rates that make sense. Based in the Dominican Republic, we bridge cultures and timezones to become your ideal development partner.",
+  "ctaText": "Get a Quote",
+  "techStack": [
+    { "name": "React", "icon": "react" },
+    { "name": "Node.js", "icon": "nodejs" },
+    { "name": "TypeScript", "icon": "typescript" },
+    { "name": "PostgreSQL", "icon": "postgresql" },
+    { "name": "AWS", "icon": "aws" }
+  ]
+}
