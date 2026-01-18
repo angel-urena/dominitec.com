@@ -72,15 +72,9 @@ function ServiceCard({ service, index }: ServiceCardProps) {
 
 export function Services({ services }: ServicesProps) {
   return (
-    <section id="services" className="relative py-24 lg:py-32 overflow-hidden bg-slate-50 dark:bg-slate-950">
-      {/* Background decorations */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Large gradient blob - top right */}
-        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-blue-500/10 dark:bg-blue-400/10 blur-3xl" />
-
-        {/* Accent blob - bottom left */}
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-red-500/8 dark:bg-red-400/8 blur-3xl" />
-
+    <section id="services" className="relative py-24 lg:py-32 overflow-hidden">
+      {/* Subtle geometric accents */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating geometric shapes */}
         <div className="absolute top-1/4 right-1/4 w-4 h-4 rotate-45 bg-blue-500/20 dark:bg-blue-400/30" />
         <div className="absolute bottom-1/4 left-1/4 w-6 h-6 rounded-full bg-red-500/15 dark:bg-red-400/20" />

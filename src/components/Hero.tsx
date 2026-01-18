@@ -45,24 +45,17 @@ function TechIcon({ icon, className }: { icon: string; className?: string }) {
 
 export function Hero({ headline, subtext, ctaText, techStack, onCtaClick }: HeroProps) {
   return (
-    <section id="hero" className="relative min-h-screen overflow-hidden bg-slate-50 dark:bg-slate-950">
-      {/* Abstract geometric background */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Large blue circle - top right */}
-        <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-blue-500/10 dark:bg-blue-400/10 blur-3xl" />
-
-        {/* Red accent shape - bottom left */}
-        <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-red-500/8 dark:bg-red-400/8 blur-3xl" />
-
+    <section id="hero" className="relative min-h-screen overflow-hidden">
+      {/* Subtle geometric accents */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating geometric shapes */}
         <div className="absolute top-1/4 left-1/4 w-4 h-4 rotate-45 bg-blue-500/20 dark:bg-blue-400/30" />
         <div className="absolute top-1/3 right-1/3 w-6 h-6 rounded-full bg-red-500/20 dark:bg-red-400/20" />
         <div className="absolute bottom-1/3 left-1/3 w-3 h-3 rotate-12 bg-blue-600/15 dark:bg-blue-400/20" />
         <div className="absolute top-2/3 right-1/4 w-5 h-5 rotate-45 border-2 border-blue-500/20 dark:border-blue-400/30" />
-        <div className="absolute top-1/2 left-1/6 w-8 h-8 rounded-full border-2 border-red-500/15 dark:border-red-400/20" />
 
         {/* Diagonal lines pattern */}
-        <svg className="absolute inset-0 w-full h-full opacity-[0.03] dark:opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+        <svg className="absolute inset-0 w-full h-full opacity-[0.02] dark:opacity-[0.04]" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="diagonal-lines" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
               <path d="M-10,10 l20,-20 M0,40 l40,-40 M30,50 l20,-20" stroke="currentColor" strokeWidth="1" className="text-blue-600 dark:text-blue-400" />

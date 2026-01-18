@@ -111,41 +111,19 @@ export function Contact({ contact }: ContactProps) {
   }
 
   return (
-    <section id="contact" className="relative py-24 lg:py-32 overflow-hidden bg-slate-50 dark:bg-slate-950">
-      {/* Background decorations */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Large gradient blob - top left */}
-        <div className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-blue-500/10 dark:bg-blue-400/10 blur-3xl" />
-
-        {/* Accent blob - bottom right */}
-        <div className="absolute -bottom-40 -right-40 w-80 h-80 rounded-full bg-red-500/8 dark:bg-red-400/8 blur-3xl" />
-
+    <section id="contact" className="relative py-24 lg:py-32 overflow-hidden">
+      {/* Subtle geometric accents */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating geometric shapes */}
         <div className="absolute top-1/3 right-1/4 w-5 h-5 rotate-45 bg-blue-500/20 dark:bg-blue-400/30" />
         <div className="absolute bottom-1/3 left-1/5 w-4 h-4 rounded-full bg-red-500/15 dark:bg-red-400/20" />
         <div className="absolute top-1/2 left-1/4 w-6 h-6 rotate-12 border-2 border-blue-500/20 dark:border-blue-400/20" />
 
         {/* Subtle grid pattern */}
-        <svg
-          className="absolute inset-0 w-full h-full opacity-[0.02] dark:opacity-[0.03]"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg className="absolute inset-0 w-full h-full opacity-[0.02] dark:opacity-[0.03]" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <pattern
-              id="contact-grid"
-              x="0"
-              y="0"
-              width="60"
-              height="60"
-              patternUnits="userSpaceOnUse"
-            >
-              <path
-                d="M60 0H0v60"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1"
-                className="text-slate-900 dark:text-white"
-              />
+            <pattern id="contact-grid" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+              <path d="M60 0H0v60" fill="none" stroke="currentColor" strokeWidth="1" className="text-slate-900 dark:text-white" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#contact-grid)" />
