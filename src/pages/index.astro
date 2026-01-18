@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
 import { Services } from '../components/Services';
 import { Contact } from '../components/Contact';
@@ -62,6 +63,13 @@ const contactData = {
 ---
 
 <Layout>
+  <Header
+    client:load
+    onGetQuoteClick={() => {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    }}
+  />
+
   <main>
     <Hero
       client:load
