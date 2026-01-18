@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { AnimatedSection } from './AnimatedSection'
 
 interface ContactField {
   label: string
@@ -132,7 +133,7 @@ export function Contact({ contact }: ContactProps) {
 
       <div className="relative z-10 max-w-2xl mx-auto px-6 lg:px-8">
         {/* Section header */}
-        <div className="text-center mb-12">
+        <AnimatedSection className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold bg-blue-100 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 mb-4">
             Contact
           </span>
@@ -142,7 +143,7 @@ export function Contact({ contact }: ContactProps) {
           <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
             {contact.subtext}
           </p>
-        </div>
+        </AnimatedSection>
 
         {/* Success notification */}
         {showSuccess && (
@@ -193,11 +194,12 @@ export function Contact({ contact }: ContactProps) {
         )}
 
         {/* Form card */}
-        <div className="relative">
-          {/* Card glow effect */}
-          <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-3xl opacity-10 blur-lg" />
+        <AnimatedSection variant="scaleUp" delay={150}>
+          <div className="relative">
+            {/* Card glow effect */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-3xl opacity-10 blur-lg" />
 
-          <form
+            <form
             onSubmit={handleSubmit}
             className="relative bg-white dark:bg-slate-800/80 rounded-2xl p-8 sm:p-10 border border-slate-200/80 dark:border-slate-700/50 shadow-xl shadow-slate-900/5 dark:shadow-black/20 backdrop-blur-sm"
           >
@@ -354,8 +356,9 @@ export function Contact({ contact }: ContactProps) {
                 </span>
               )}
             </button>
-          </form>
-        </div>
+            </form>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   )

@@ -1,3 +1,5 @@
+import { AnimatedSection } from './AnimatedSection'
+
 interface Service {
   id: string
   icon: string
@@ -93,7 +95,7 @@ export function Services({ services }: ServicesProps) {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
         {/* Section header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
+        <AnimatedSection className="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
           <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold bg-blue-100 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 mb-4">
             What We Do
           </span>
@@ -103,12 +105,14 @@ export function Services({ services }: ServicesProps) {
           <p className="mt-4 text-lg lg:text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
             Specialized development services tailored to bring your ideas to life
           </p>
-        </div>
+        </AnimatedSection>
 
         {/* Service cards */}
         <div className="grid sm:grid-cols-2 gap-10 lg:gap-12">
           {services.map((service, index) => (
-            <ServiceCard key={service.id} service={service} index={index} />
+            <AnimatedSection key={service.id} delay={index * 150} variant="fadeUp">
+              <ServiceCard service={service} index={index} />
+            </AnimatedSection>
           ))}
         </div>
 

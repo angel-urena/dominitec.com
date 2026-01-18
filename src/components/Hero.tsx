@@ -11,6 +11,7 @@ import {
   SiDocker,
   SiKubernetes,
 } from 'react-icons/si'
+import { TypeWriter } from './TypeWriter'
 
 interface TechStackItem {
   name: string
@@ -143,29 +144,38 @@ export function Hero({ headline, subtext, ctaText, techStack, onCtaClick }: Hero
                     <span className="ml-4 text-xs text-slate-400 font-mono">dominitec-app</span>
                   </div>
 
-                  {/* Code content */}
-                  <div className="p-4 font-mono text-sm">
-                    <div className="flex gap-4">
-                      <div className="text-slate-600 select-none">1</div>
-                      <div><span className="text-purple-400">const</span> <span className="text-blue-300">project</span> <span className="text-white">=</span> <span className="text-orange-300">&#123;</span></div>
-                    </div>
-                    <div className="flex gap-4">
-                      <div className="text-slate-600 select-none">2</div>
-                      <div className="pl-4"><span className="text-blue-300">quality</span><span className="text-white">:</span> <span className="text-green-400">"exceptional"</span><span className="text-white">,</span></div>
-                    </div>
-                    <div className="flex gap-4">
-                      <div className="text-slate-600 select-none">3</div>
-                      <div className="pl-4"><span className="text-blue-300">price</span><span className="text-white">:</span> <span className="text-green-400">"competitive"</span><span className="text-white">,</span></div>
-                    </div>
-                    <div className="flex gap-4">
-                      <div className="text-slate-600 select-none">4</div>
-                      <div className="pl-4"><span className="text-blue-300">delivery</span><span className="text-white">:</span> <span className="text-green-400">"fast"</span></div>
-                    </div>
-                    <div className="flex gap-4">
-                      <div className="text-slate-600 select-none">5</div>
-                      <div><span className="text-orange-300">&#125;</span><span className="text-white">;</span></div>
-                    </div>
-                  </div>
+                  {/* Code content with typing animation */}
+                  <TypeWriter
+                    lines={[
+                      {
+                        lineNumber: 1,
+                        text: 'const project = {',
+                        content: <><span className="text-purple-400">const</span> <span className="text-blue-300">project</span> <span className="text-white">=</span> <span className="text-orange-300">{'{'}</span></>,
+                      },
+                      {
+                        lineNumber: 2,
+                        text: '    quality: "exceptional",',
+                        content: <span className="pl-4"><span className="text-blue-300">quality</span><span className="text-white">:</span> <span className="text-green-400">"exceptional"</span><span className="text-white">,</span></span>,
+                      },
+                      {
+                        lineNumber: 3,
+                        text: '    price: "competitive",',
+                        content: <span className="pl-4"><span className="text-blue-300">price</span><span className="text-white">:</span> <span className="text-green-400">"competitive"</span><span className="text-white">,</span></span>,
+                      },
+                      {
+                        lineNumber: 4,
+                        text: '    delivery: "fast"',
+                        content: <span className="pl-4"><span className="text-blue-300">delivery</span><span className="text-white">:</span> <span className="text-green-400">"fast"</span></span>,
+                      },
+                      {
+                        lineNumber: 5,
+                        text: '};',
+                        content: <><span className="text-orange-300">{'}'}</span><span className="text-white">;</span></>,
+                      },
+                    ]}
+                    typingSpeed={40}
+                    startDelay={800}
+                  />
                 </div>
 
                 {/* Floating badges */}
