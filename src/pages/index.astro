@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
 import { Services } from '../components/Services';
+import { About } from '../components/About';
 import { Contact } from '../components/Contact';
 
 // Hero data
@@ -85,6 +86,8 @@ const contactData = {
     <Services
       services={servicesData.services}
     />
+
+    <About />
 
     <Contact
       client:load
